@@ -71,6 +71,7 @@ private:
 	void UpdatePacman(int elapsedTime);
 	void UpdateMunchie(Enemy* munchie, int elapsedTime);
 	void UpdateGhost(MovingEnemy* ghost, int elapsedTime, int type);
+	void LoadHighScores();
 
 	// Data to represent Pacman
 	Player* _pacman;
@@ -83,9 +84,6 @@ private:
 
 	// Data to represent Ghosts
 	MovingEnemy* _ghosts[GHOSTCOUNT];
-
-	// Position for String
-	Vector2* _stringPosition;
 
 	// Score
 	int _score;
@@ -108,7 +106,7 @@ private:
 	Texture2D* _menuBackground;
 	Rect* _menuRectangle;
 	Vector2* _menuStringPosition;
-	Rect* _menuOptions[4];
+	Rect* _menuOptions[3];
 	int _menuSelect;
 	bool _paused;
 	bool _pKeyDown;
@@ -118,7 +116,6 @@ private:
 	Rect* _startRectangle;
 	Vector2* _startStringPosition;
 	bool _start;
-
 
 public:
 	/// <summary> Constructs the Pacman class. </summary>
